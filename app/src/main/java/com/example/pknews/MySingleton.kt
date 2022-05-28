@@ -6,6 +6,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.toolbox.Volley
 
 class MySingleton constructor(context: Context) {
+
     companion object {
         @Volatile
         private var INSTANCE: MySingleton? = null
@@ -16,6 +17,7 @@ class MySingleton constructor(context: Context) {
                 }
             }
     }
+
     private val requestQueue: RequestQueue by lazy {
         // applicationContext is key, it keeps you from leaking the
         // Activity or BroadcastReceiver if someone passes one in.
